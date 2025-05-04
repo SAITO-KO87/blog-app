@@ -1,10 +1,15 @@
 <?php
-require '../config/db.php';
+require_once __DIR__ . '/../includes/auth.php';
+checkLogin();
+require_once __DIR__ . '/../includes/db.php';
 
-$id = $_GET['id']; // URLのidを取得
-$stmt = $pdo->prepare("DELETE FROM posts WHERE id = :id");
-$stmt->bindParam(':id', $id);
-$stmt->execute();
+$id = $_GET['id'] ?? null;
 
-header('Location: index.php'); // 削除後にトップページへ
-exit;
+if ($id) {
+    $stmt = $pdo->prepare('DELETE FROM posts WHERE id = ?');
+    $stmt->execute([$id]);
+    header('Location: index.php');
+    exit;
+} else {
+    echo '記事IDが指定されていません。';
+}
