@@ -1,6 +1,6 @@
 <footer>
     <hr>
-    <p>&copy; <?= date('Y') ?> My Blog</p>
+    <p>&copy; <?= date('Y') ?> ブログ練習</p>
 </footer>
 </body>
 </html>

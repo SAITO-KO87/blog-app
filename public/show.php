@@ -20,13 +20,7 @@ if (!$post) {
 
 <h2><?= htmlspecialchars($post['title']) ?></h2>
 <p><?= nl2br(htmlspecialchars($post['content'])) ?></p>
-
-<?php if (isset($_SESSION['user_id'])): ?>
-    <p>
-        <a href="edit.php?id=<?= $post['id'] ?>">編集</a>
-        <a href="delete.php?id=<?= $post['id'] ?>" onclick="return confirm('本当に削除しますか？');">削除</a>
-    </p>
-<?php endif; ?>
+<p>作成日時: <?= htmlspecialchars($post['created_at']) ?></p>
 
 <a href="index.php">← 記事一覧に戻る</a>
 

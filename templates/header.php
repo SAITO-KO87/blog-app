@@ -2,11 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ブログ</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ブログ練習</title>
 </head>
 <body>
-<header>
-    <h1><a href="index.php">Myブログ</a></h1>
+    <h1>My Blog</h1>
+    <?php if (isset($_SESSION['user_id'])): ?>
+        <p>ようこそ！<a href="logout.php">ログアウト</a></p>
+    <?php else: ?>
+        <p><a href="login.php">ログイン</a></p>
+    <?php endif; ?>
     <hr>
-</header>
