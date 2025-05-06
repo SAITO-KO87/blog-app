@@ -2,16 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ブログ練習</title>
-    <link rel ="stylesheet" href="css/style.css">
+    <title>My Blog</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: 独自CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
+<header class="bg-dark text-white py-3 text-center">
     <h1>My Blog</h1>
     <?php if (isset($_SESSION['user_id'])): ?>
-        <p>ようこそ！ <a href="logout.php" style="color: #fff; text-decoration: underline;">ログアウト</a></p>
+        <p><a href="logout.php" class="text-white text-decoration-underline">ログアウト</a></p>
     <?php else: ?>
-        <p><a href="login.php" style="color: #fff; text-decoration: underline;">ログイン</a></p>
+        <p><a href="login.php" class="text-white text-decoration-underline">ログイン</a></p>
     <?php endif; ?>
 </header>
-<div class="container">
+<div class="container my-4">
