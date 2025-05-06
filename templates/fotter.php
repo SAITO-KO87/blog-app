@@ -1,6 +1,7 @@
+</div> <!-- container -->
 <footer>
     <hr>
-    <p>&copy; <?= date('Y') ?> ブログ練習</p>
+    <p>&copy; <?= date('Y') ?>2025 ブログ練習</p>
 </footer>
 </body>
 </html>
